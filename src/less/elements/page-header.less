@@ -1,0 +1,177 @@
+
+.page-header{
+	padding-top: 110px;
+	padding-bottom: 85px;
+	position: relative;
+	&__top{
+		position: relative;
+		box-shadow: 0 0 5px rgba(0,0,0,.2);
+		.container{
+			position: relative;
+		}
+	}
+	&__content{
+		padding: 16px 0;
+	}
+}
+.logo{
+	position: absolute;
+	top: -18px;
+	left: 15px;
+	width: 120px;
+	height: 120px;
+}
+.main-menu{
+	margin-left: 180px;
+	cursor: pointer;
+	&__item{
+		.inline-block;
+	}
+	&__link{
+		display: block;
+		margin-right: 17px;
+		padding: 12px 0;
+		font-size: 18px;
+		text-transform: uppercase;
+		color: @gray;
+		border-bottom: 1px solid transparent;
+		transition: all .5s;
+		&:focus,
+		&:hover{
+			text-decoration: none;
+			color: @gray;
+			border-color: @red;
+		}
+		&.active{
+			border-color: @red;
+		}
+	}
+}
+.socials{
+	cursor: pointer;
+	&__item{
+		float: right;
+		padding: 10px 0;
+	}
+	&__link{
+		display: block !important;
+		width: 27px;
+		height: 26px;
+		overflow: hidden;
+		img{
+			opacity: .8;
+			&:hover{
+				opacity: 1;
+			}
+		}
+	}
+}
+.fa-globe{
+	position: absolute;
+	top: 24px;
+	right: 60px;
+	display: none;
+	font-size: 30px;
+	color: #cfcecd;
+	opacity: .8;
+	&:hover{
+		opacity: 1;
+	}
+}
+.fa-bars{
+	display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+
+}
+
+@media only screen and (max-width: 992px) {
+	.main-menu{
+		margin-left: 140px;
+		&__link{
+			margin-right: 10px;
+		}
+	}
+	.socials{
+		position: absolute;
+		top: 45px;
+		right: 58px;
+		display: none;
+		&__item{
+			float: none;
+			padding: 0;
+			margin-bottom: 10px;
+		}
+	}
+	.fa-globe{
+		display: block;
+	}
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+	.page-header__content{
+		.col-sm-2{
+			width: 100%;
+		}
+	}
+	.fa-globe{
+		display: none;
+	}
+	.fa-bars{
+		position: absolute;
+		top: 7px;
+		right: 60px;
+		display: block;
+		font-size: 24px;
+		cursor: pointer;
+	}
+	.open-menu{
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 33px;
+		box-shadow: 0 0 5px rgba(0,0,0,.2);
+	}
+	.logo{
+		top: 0;
+		width: 40px;
+		height: 40px;
+		img{
+			max-width: 100%;
+			height: auto;
+		}
+	}
+	.main-menu{
+		margin-left: 45px;
+		margin-top: 24px;
+		display: none;
+		&__item{
+			display: block;
+		}
+		&__link{
+			padding-left: 20px;
+			border-bottom: none;
+			transition: all .5s;
+			&:hover{
+				background: darken(white, 10%);
+			}
+		}
+	}
+	.socials{
+		position: relative;
+		top: 0;
+		left: 64px;
+		&__item{
+			.inline-block;
+		}
+	}
+}
+
+@media only screen and (max-width: 480px) {
+
+}
